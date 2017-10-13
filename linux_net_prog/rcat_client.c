@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 {
 	int 	 sock;								/* Socket descriptor */
 	struct sockaddr_in server;	/* Server's address */
-	struct hostenet *host;			/* Server host info */
+	struct hostent *host;	  		/* Server host info */
 	char 	 buffer[BSIZE], *p;
 	int 	 count, server_len;
 	
