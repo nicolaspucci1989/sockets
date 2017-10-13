@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
     }
 
 
+		// Setear todos los valores del buffer a cero.
     bzero((char *) &serv_addr, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
     bcopy((char *)server->h_addr,
