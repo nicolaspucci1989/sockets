@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
 
 
     server = gethostbyname(argv[1]); // Consulta al dns y contesta con el numero ip
+                                     // Es necesario un dsn para resolver 
     // Queda la direccion del server en formato numero ip
 		// gethostbyname devuelve un puntero a un hostent
     if (server == NULL) { // Comprobar el puntero
