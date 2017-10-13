@@ -8,7 +8,7 @@
 #include <netdb.h>
 #include <stdio.h>
 
-#define TFT_PORT	69 			/* tftp's well-known port number */
+#define TFTP_PORT	69 			/* tftp's well-known port number */
 #define BSIZE 	 	600			/* size of our data buffer */
 #define MODE 			"octet"
 
