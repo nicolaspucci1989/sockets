@@ -1,6 +1,6 @@
 /*
-Remote cat client using TFTP server (UDP socket implementation).
-Usage: rcat hostname filename
+	Remote cat client using TFTP server (UDP socket implementation).
+	Usage: rcat hostname filename
 */
 
 #include <string.h>
