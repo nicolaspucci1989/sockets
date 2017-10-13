@@ -9,7 +9,7 @@ Usage: rcat hostname filename
 #include <stdio.h>
 
 #define TFT_PORT	69 			/* tftp's well-known port number */
-#define BGSIZE 	 	600			/* size of our data buffer */
+#define BSIZE 	 	600			/* size of our data buffer */
 #define MODE 			"octet"
 
 #define OP_PRO		1 			/* TFTP op-codes */
