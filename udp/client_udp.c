@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
    struct hostent *hp;
    char buffer[256];
    
-   if (argc != 3) { printf("Usage: server port\n");
+   if (argc != 3) { printf("Usage: server port\n"); // Comprobar parametros
                     exit(1);
    }
    sock= socket(AF_INET, SOCK_DGRAM, 0);
@@ -50,6 +50,6 @@ int main(int argc, char *argv[])
 
 void error(const char *msg)
 {
-    perror(msg);
+    perror(msg); // perror imprime en el syslog
     exit(0);
 }
