@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	int 	 count, server_len;
 	
 	if (argc != 3) {
-		fprint(stderr, "usage: %s hostname filename\n", argv[0]);
+		fprintf(stderr, "usage: %s hostname filename\n", argv[0]);
 		exit(1);
 	}
 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	/* Get the server's address */
 	host = gethostbyname(argv[1]);
 	if (host == NULL) {
-		fprint(stderr, "unknown host: %s\n", argv[1]);
+		fprintf(stderr, "unknown host: %s\n", argv[1]);
 		exit(1);
 	}
 	server.sin_family = AF_INET;
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 			count = recvfrom(sock, buffer, BSIZE, 0,
 											(struct sockaddr *)&server, &server_len);
 			if (ntohs(*(short *)buffer) == OP_ERROR) {
-				fprint(stderr, "rcat: %s\n", buffer + 4;
+				fprintf(stderr, "rcat: %s\n", buffer + 4);
 			}
 			else {
 				write(1, buffer + 4, count-4);
@@ -87,5 +87,3 @@ int main(int argc, char *argv[])
 	return 0;
 }
 	
-	
-}
