@@ -39,8 +39,8 @@ int main(int argc, char *argv[])
 		fprint(stderr, "unknown host: %s\n", argv[1]);
 		exit(1);
 	}
-	server.sin_family = AF_INET:
-	memcpy(&server, sin_addr, s_addr, host->h_addr, host->h_length);
+	server.sin_family = AF_INET;
+	memcpy(&server.sin_addr.s_addr, host->h_addr, host->h_length);
 	server.sin_port = htons(TFTP_PORT);
 
 	/* Build a tftp Read Request packet. This is messy because the 
